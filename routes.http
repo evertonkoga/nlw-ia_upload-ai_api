@@ -13,3 +13,13 @@ Content-Type: audio/mpeg
 
 < ./example.mp3
 ------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+###
+
+# @name transcription
+POST http://localhost:3333/videos/3518764d-fc4e-4fe1-b2e4-0e0ccd9e55a5/transcription
+Content-Type: application/json
+
+{
+    "prompt": "Clean Architecture com DDD"
+}

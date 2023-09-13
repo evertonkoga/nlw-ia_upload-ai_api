@@ -24,6 +24,7 @@ tmp
 *.sln
 *.sw?
 *.db
+.env
 
 # Storybook
 storybook-static
