@@ -1,0 +1,17 @@
+{
+  "name": "nlw-ia_upload-ai_api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsx watch src/server.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.6.0",
+    "tsx": "^3.12.9",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "fastify": "^4.23.0"
+  }
+}
