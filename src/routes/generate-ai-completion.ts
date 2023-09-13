@@ -2,7 +2,6 @@ import { FastifyInstance } from "fastify";
 import { z } from 'zod';
 import { prisma } from "../lib/prisma";
 import { openai } from "../lib/openai";
-import { createReadStream } from "node:fs";
 
 export async function generateAICompletionRoute(app: FastifyInstance) {
 
