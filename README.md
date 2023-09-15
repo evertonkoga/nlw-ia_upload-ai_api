@@ -28,11 +28,8 @@ git clone https://github.com/evertonkoga/nlw-ia_upload-ai_api.git
 ```shell
 yarn
 ```
-
-2. Baixar as dependências:
-```shell
-yarn
-```
+> Caso seja a aprimeira execução após baixar o projeto.
+> Execute os passos do item **Variáveis de ambiente**
 
 3. Executar o projeto:
 ```shell
@@ -49,13 +46,37 @@ OPENAI_KEY="sua key da OpenAI localizada em canto superior direito -> seu perfil
 ```
 
 ## Banco de dados
-
+### Migrações do banco de dados
 Para criar o banco de dados e executar as migration e seeds, execute o comando abaixo:
 
 ```shell
 npx prisma migrate dev --name init
 ```
 Pronto! Agora o banco de dados está pronto para ser utilizado.
+
+#### Executar seeds
+
+Caso queira popular o banco com informações base necessárias.
+Adicione na raiz do **package.json** os dados abaixo:
+
+```json
+"prisma": {
+  "seed": "tsx prisma/seed.ts"
+}
+```
+Em seguida execute o comando:
+```shell
+npx prisma db seed
+```
+
+#### Problema após alterações diretamente no banco
+
+Caso tenha alterado a estrutura de alguma tabela diretamento no banco, terá problemas com execuções futuras através do Prisma.
+Neste caso execute o comando abaixo, para sincronizar a banco com os arquivos do projeto.
+
+```shell
+npx prisma migrate DATA_BASE
+```
 
 #### Visualizar os dados
 
